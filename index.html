@@ -262,7 +262,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/06/11/使用npm下载vue/" itemprop="url">使用npm下载vue.js</a></h1>
+                <a class="post-title-link" href="/2019/06/11/使用npm下载vue/" itemprop="url">Untitled</a></h1>
         
 
         <div class="post-meta">
@@ -285,28 +285,6 @@
           </span>
 
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/原创/" itemprop="url" rel="index">
-                    <span itemprop="name">原创</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -328,7 +306,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  445
+                  501
                 </span>
               
 
@@ -344,7 +322,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  2
                 </span>
               
             </div>
@@ -367,53 +345,40 @@
       
         
           
-            <h2 id="安装npm"><a href="#安装npm" class="headerlink" title="安装npm"></a>安装npm</h2><h2 id="一、安装npm"><a href="#一、安装npm" class="headerlink" title="一、安装npm"></a>一、安装npm</h2><h3 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1. 安装node.js"></a>1. 安装node.js</h3><p><strong>npm</strong>(Node Package Manager): node.js下的包管理器</p>
+            <p>title: 使用npm下载vue.js<br>date: 2019-06-11 14:29:12<br>tags: npm,vue<br>categories: 原创</p>
+<h2 id="安装npm"><a href="#安装npm" class="headerlink" title="安装npm"></a>安装npm</h2><h2 id="一、安装npm"><a href="#一、安装npm" class="headerlink" title="一、安装npm"></a>一、安装npm</h2><h3 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1. 安装node.js"></a>1. 安装node.js</h3><p><strong>npm</strong>(Node Package Manager): node.js下的包管理器</p>
 <p>前往node.js官网下载并安装工具，nodejs安装完毕后自动会安装npm，在命令行输入以下命令测试是否安装成功，正确会出现版本号。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
 
-<p><img src="/.com//E:%5CDT%5Cworkspace_hexo%5Csource_posts%5C%E4%BD%BF%E7%94%A8npm%E4%B8%8B%E8%BD%BDvue%5C%E5%9B%BE%E7%89%871.png" alt="图片1"></p>
-<p><img src="/.com//E:%5CDT%5Cworkspace_hexo%5Csource_posts%5C%E4%BD%BF%E7%94%A8npm%E4%B8%8B%E8%BD%BDvue%5C%E5%9B%BE%E7%89%872.png" alt></p>
-<p>再看看另外2个目录，npm的本地仓库跑在系统盘c盘的用户目录了(没见到npm-cache是因为没有用过，一使用缓存目录就生成了)，我们试图把这2个目录移动回到D:\nodejs</p>
-<p><img src="/.com//E:%5CDT%5Cworkspace_hexo%5Csource_posts%5C%E4%BD%BF%E7%94%A8npm%E4%B8%8B%E8%BD%BDvue%5C%E5%9B%BE%E7%89%873.png" alt></p>
-<h3 id="2-更改本地库和缓存目录"><a href="#2-更改本地库和缓存目录" class="headerlink" title="2. 更改本地库和缓存目录"></a>2. 更改本地库和缓存目录</h3><p>先如下图建立2个目录:</p>
-<p><img src="/.com//E:%5CDT%5Cworkspace_hexo%5Csource_posts%5C%E4%BD%BF%E7%94%A8npm%E4%B8%8B%E8%BD%BDvue%5C%E5%9B%BE%E7%89%874.png" alt></p>
+<p>再看看另外2个目录: C:\Users\Administrator\AppData\Roaming下的npm和npm-cache，npm的本地仓库跑在系统盘c盘的用户目录了(没见到npm-cache是因为没有用过，一使用缓存目录就生成了)，我们试图把这2个目录移动回到D:\nodejs</p>
+<h3 id="2-更改本地库和缓存目录"><a href="#2-更改本地库和缓存目录" class="headerlink" title="2. 更改本地库和缓存目录"></a>2. 更改本地库和缓存目录</h3><p>先在nodejs目录下新建2个文件夹: node_cache和node_global</p>
 <p>然后运行以下2条命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set prefix &quot;D:\nodejs\node_global&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config set prefix &quot;D:\nodejs\node_global&quot;</span><br><span class="line">npm config set cache &quot;D:\nodejs\node_cache&quot;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set cache &quot;D:\nodejs\node_cache&quot;</span><br></pre></td></tr></table></figure>
-
-<p>看一下npm的本地仓库，输入命令:</p>
+<p>看一下npm的本地仓库，输入以下命令发现目录已经改变：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm list -global</span><br></pre></td></tr></table></figure>
 
-<p><img src="/.com//E:%5CDT%5Cworkspace_hexo%5Csource_posts%5C%E4%BD%BF%E7%94%A8npm%E4%B8%8B%E8%BD%BDvue%5C%E5%9B%BE%E7%89%875.png" alt></p>
 <h3 id="3-配置下载源地址"><a href="#3-配置下载源地址" class="headerlink" title="3. 配置下载源地址"></a>3. 配置下载源地址</h3><p>输入以下命令配置淘宝镜像站：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry=http://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
 
-<p><img src="/.com//E:%5CDT%5Cworkspace_hexo%5Csource_posts%5C%E4%BD%BF%E7%94%A8npm%E4%B8%8B%E8%BD%BDvue%5C%E5%9B%BE%E7%89%876.png" alt></p>
 <p>输入以下命令显示所有配置信息：</p>
 <figure class="highlight plain"><figcaption><span>config list</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config list</span><br></pre></td></tr></table></figure>
 
-<p><img src="/.com//E:%5CDT%5Cworkspace_hexo%5Csource_posts%5C%E4%BD%BF%E7%94%A8npm%E4%B8%8B%E8%BD%BDvue%5C%E5%9B%BE%E7%89%877.png" alt></p>
-<p>我们关注一个配置文件C:\Users\Administrator\.npmrc</p>
-<p><img src="/.com//E:%5CDT%5Cworkspace_hexo%5Csource_posts%5C%E4%BD%BF%E7%94%A8npm%E4%B8%8B%E8%BD%BDvue%5C%E5%9B%BE%E7%89%878.png" alt></p>
+<p>我们关注一个配置文件C:\Users\Administrator\.npmrc, 发现刚才配置的信息在该文件当中。</p>
 <h3 id="4-更新npm"><a href="#4-更新npm" class="headerlink" title="4. 更新npm"></a>4. 更新npm</h3><p>更新npm：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install npm -g</span><br></pre></td></tr></table></figure>
 
-<p><img src="/.com//E:%5CDT%5Cworkspace_hexo%5Csource_posts%5C%E4%BD%BF%E7%94%A8npm%E4%B8%8B%E8%BD%BDvue%5C%E5%9B%BE%E7%89%879.png" alt></p>
 <p>再次查看global里有什么模块：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm list -global</span><br></pre></td></tr></table></figure>
 
-<p><img src="/.com//E:%5CDT%5Cworkspace_hexo%5Csource_posts%5C%E4%BD%BF%E7%94%A8npm%E4%B8%8B%E8%BD%BDvue%5C%E5%9B%BE%E7%89%8710.png" alt></p>
 <h3 id="5-增加环境变量"><a href="#5-增加环境变量" class="headerlink" title="5. 增加环境变量"></a>5. 增加环境变量</h3><p>将D:\nodejs\node_global加入环境变量PATH中。</p>
 <h2 id="二、下载核心库vue-js"><a href="#二、下载核心库vue-js" class="headerlink" title="二、下载核心库vue.js"></a>二、下载核心库vue.js</h2><h3 id="1-安装bower"><a href="#1-安装bower" class="headerlink" title="1. 安装bower"></a>1. 安装bower</h3><p>先安装bower：(安装bower需先安装node.js和git)</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm insall bower -g</span><br></pre></td></tr></table></figure>
 
-<p>安装后，在node_global目录下会增加相应命令</p>
-<p><img src="/.com//E:%5CDT%5Cworkspace_hexo%5Csource_posts%5C%E4%BD%BF%E7%94%A8npm%E4%B8%8B%E8%BD%BDvue%5C%E5%9B%BE%E7%89%8711.png" alt></p>
+<p>安装后，在node_global目录下会增加相应命令。</p>
 <p>查看vue的版本：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bower info vue</span><br></pre></td></tr></table></figure>
 
-<p><img src="/.com//E:%5CDT%5Cworkspace_hexo%5Csource_posts%5C%E4%BD%BF%E7%94%A8npm%E4%B8%8B%E8%BD%BDvue%5C%E5%9B%BE%E7%89%8712.png" alt></p>
 <h3 id="2-初始化npm"><a href="#2-初始化npm" class="headerlink" title="2. 初始化npm"></a>2. 初始化npm</h3><p>初始化npm，在项目中引导创建一个package.json文件用以保存安装包的信息：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init --yes</span><br></pre></td></tr></table></figure>
 
@@ -626,167 +591,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/11/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Steven">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Steven">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/06/11/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-11T09:42:17+08:00">
-                2019-06-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  73
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2019/06/11/hello-world/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -833,7 +637,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -844,7 +648,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -855,7 +659,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
@@ -916,7 +720,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">530</span>
+    <span title="Site words total count">513</span>
   
 </div>
 
